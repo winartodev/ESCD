@@ -1,4 +1,3 @@
-@@ -1 +1,85 @@
 <?= $this->extend('layout/admin/template'); ?>
 <?= $this->extend('layout/admin/template'); ?>
 <?= $this->section('content')?>
