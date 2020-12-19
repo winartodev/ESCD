@@ -33,7 +33,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/calendar.html" class="nav-link">
+            <a href="<?= base_url(); ?>/admin/gejala" class="nav-link">
               <i class="nav-icon fa fa-circle"></i>
               <p>
                 Gejala
