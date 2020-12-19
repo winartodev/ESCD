@@ -25,6 +25,14 @@
                with font-awesome or any other icon font library -->
           <li class="nav-header">MAIN</li>
           <li class="nav-item">
+            <a href="<?= base_url(); ?>/admin" class="nav-link">
+              <i class="nav-icon fa fa-circle"></i>
+              <p>
+                Dashboard
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="pages/calendar.html" class="nav-link">
               <i class="nav-icon fa fa-circle"></i>
               <p>
