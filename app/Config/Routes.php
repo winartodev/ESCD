@@ -33,6 +33,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'Home::index');
 $routes->get('/admin', 'Admin\Admin::index');
 $routes->get('/admin/gejala', 'Admin\Gejala::index');
+$routes->get('/admin/solusi', 'Admin\Solusi::index');
 
 /**
  * --------------------------------------------------------------------
