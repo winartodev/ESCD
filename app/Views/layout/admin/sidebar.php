@@ -41,7 +41,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/gallery.html" class="nav-link">
+            <a href="<?= base_url(); ?>/admin/kerusakan" class="nav-link">
               <i class="nav-icon fa fa-circle fa-lg"></i>
               <p>
                 Kerusakan
