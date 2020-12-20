@@ -142,6 +142,28 @@
       $('#deleteModal').modal('show');
     });
 
+    $('.btn-view-solusi').on('click', function () {
+      var id_solusi = $(this).data('id_solusi');
+      var solusi = $(this).data('solusi');
+      $('.id_solusi').text(id_solusi);
+      $('.solusi').html(solusi).text();
+    });
+
+    $('.btn-edit-solusi').on('click', function () {
+      var id_solusi = $(this).data('id_solusi');
+      var solusi = $(this).data('solusi');
+      $('.id_solusi').val(id_solusi);
+      $('.solusi').text(solusi).html();    
+      $('#summernote2').summernote('code', solusi);
+    });
+
+    $('.btn-delete-solusi').on('click', function () {
+      var id_solusi = $(this).data('id_solusi');
+      $('.id_solusi').val(id_solusi); 
+      $('.text_id_solusi').text(id_solusi); 
+    });
+
+    $('#summernote1').summernote();
   });
   
   $(function () {
