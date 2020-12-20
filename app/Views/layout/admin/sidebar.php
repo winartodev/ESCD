@@ -49,6 +49,14 @@
             </a>
           </li>
           <li class="nav-item">
+            <a href="<?= base_url(); ?>/admin/solusi" class="nav-link">
+              <i class="nav-icon fa fa-circle"></i>
+              <p>
+                Solusi
+              </p>
+            </a>
+          </li>
+          <li class="nav-item">
             <a href="pages/kanban.html" class="nav-link">
               <i class="nav-icon fa fa-circle"></i>
               <p>
