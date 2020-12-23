@@ -205,6 +205,66 @@
       theme: 'bootstrap4'
     })
 
+    $('.btn-edit-gejala-basiskasus').on('click', function () {
+      var id_basiskasus = $(this).data('id_basiskasus');
+      var kode_Kasus = $(this).data('kode_kasus');
+      var id_kerusakan = $(this).data('id_kerusakan');
+      var id_gejala = $(this).data('id_gejala');
+      var bobot = $(this).data('bobot');
+      $('.id_basiskasus').val(id_basiskasus);
+      $('.kode_kasus').val(kode_Kasus);
+      $('.id_kerusakan').val(id_kerusakan);
+      $('.option_edit_gejala').val(id_gejala).trigger('change');
+      $('.bobot').val(bobot);
+    });
+
+    $('.btn-delete-gejala-basiskasus').on('click', function () {
+      var id_basiskasus = $(this).data('id_basiskasus');
+      var gejala = $(this).data('gejala');
+      $('.id_basiskasus').val(id_basiskasus);
+      $('.gejala').text(gejala);
+    });
+
+    $('.btn-delete-basiskasus').on('click', function () {
+      var kode_kasus = $(this).data('kode_kasus');
+      var kerusakan = $(this).data('kerusakan');
+      $('.kode_kasus').val(kode_kasus);
+      $('.kerusakan').text(kerusakan);
+    });
+
+    $('.btn-tambah-gejala-basiskasus').on('click', function () {
+      var kode_kasus = $(this).data('kode_kasus');
+      var kerusakan = $(this).data('kerusakan');
+      var id_kerusakan = $(this).data('id_kerusakan');
+      $('.kode_kasus').val(kode_kasus);
+      $('.kerusakan').val(kerusakan);
+      $('.id_kerusakan').val(id_kerusakan);
+    });
+
+    //Initialize Select2 Elements
+    $('.option_gejala').select2( {
+        theme: 'bootstrap4'
+      }
+    )
+
+     //Initialize Select2 Elements
+     $('.option_edit_gejala').select2( {
+        theme: 'bootstrap4'
+      }
+    )
+
+     //Initialize Select2 Elements
+     $('.option_kerusakan').select2( {
+        theme: 'bootstrap4'
+      }
+    )
+
+     //Initialize Select2 Elements
+     $('.option_edit_kerusakan').select2( {
+        theme: 'bootstrap4'
+      }
+    )
+
     $('#summernote1').summernote();
   });
   
@@ -216,6 +276,16 @@
       "buttons": ["copy", "csv", "excel", "pdf", "print", "colvis"]
     }).buttons().container().appendTo('#example1_wrapper .col-md-6:eq(0)');
     $('#example2').DataTable({
+      "paging": true,
+      "lengthChange": false,
+      "searching": false,
+      "ordering": true,
+      "info": true,
+      "autoWidth": false,
+      "responsive": true,
+    });
+
+    $('#table_basisKasus').DataTable({
       "paging": true,
       "lengthChange": false,
       "searching": false,
