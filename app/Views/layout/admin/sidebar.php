@@ -57,7 +57,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/kanban.html" class="nav-link">
+            <a href="<?= base_url(); ?>/admin/basiskasus" class="nav-link">
               <i class="nav-icon fa fa-circle"></i>
               <p>
                 Basis Kasus
