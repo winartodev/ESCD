@@ -266,6 +266,16 @@
     )
 
     $('#summernote1').summernote();
+    var table_perhitungan = document.getElementById('hasil-perhitungan');
+    table_perhitungan.style.display = "none";
+    $('.perhitugnan').on('click', function () {
+      console.log('asdf');
+      if (table_perhitungan.style.display == 'none') {
+        table_perhitungan.style.display = 'block';
+      } else {
+        table_perhitungan.style.display = 'none';
+      }
+    });
   });
   
   $(function () {
