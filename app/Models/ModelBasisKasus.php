@@ -71,4 +71,11 @@ class ModelBasisKasus extends Model
 
         return $new_number;
     }
+
+    public function total_bobot($kode_kasus) 
+    {
+        $query = $this->table('tbl_basiskasus')->selectSum('tbl_basiskasus.bobot')->join('tbl_gejala', 'tbl_gejala.id_gejala = tbl_basiskasus.id_gejala')->where(['tbl_basiskasus.kode_kasus' => $kode_kasus])->groupBy('tbl_basiskasus.kode_kasus')->get()->getResult();
+
+        return $query;
+    }
 }
