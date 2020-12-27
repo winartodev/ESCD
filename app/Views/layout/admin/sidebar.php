@@ -73,7 +73,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/kanban.html" class="nav-link">
+            <a href="<?= base_url(); ?>/admin/diagnosis" class="nav-link">
               <i class="nav-icon fa fa-circle"></i>
               <p>
                 Diagnosis Komputer
