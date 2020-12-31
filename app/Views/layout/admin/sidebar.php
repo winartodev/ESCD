@@ -65,7 +65,7 @@
             </a>
           </li>
           <li class="nav-item">
-            <a href="pages/kanban.html" class="nav-link">
+            <a href="<?= base_url(); ?>/admin/kasusbaru" class="nav-link">
               <i class="nav-icon fa fa-circle"></i>
               <p>
                 Kasus Baru
