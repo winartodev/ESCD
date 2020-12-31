@@ -91,7 +91,7 @@
                                         <td><?= $basisKasus['kode_kasus']; ?></td>
                                         <td><?= $basisKasus['kerusakan']; ?></td>
                                         <td><?= round($nilaiSimilaritas * 100, 2), '%' ; ?></td>
-                                        <?php $data[][]= ['nilai'=>$nilaiSimilaritas, 'kerusakan'=>$basisKasus['kerusakan'], 'kode_kasus'=>$basisKasus['kode_kasus']];?> 
+                                        <?php $data[][]= ['nilai'=>$nilaiSimilaritas, 'kerusakan'=>$basisKasus['kerusakan'], 'kode_kasus'=>$basisKasus['kode_kasus'], 'id_kerusakan'=>$basisKasus['solusi']];?> 
                                     </tr>
                                     <?php endforeach; ?>
                                 </tbody>
@@ -104,6 +104,8 @@
                     <div class="alert" role="alert">
                     <?php if (max($data)[0]['nilai'] != 0):?>
                         <h5 class="font-weight-bold text-center text-dark">  Dari Hasil Diagnosis anda mengalami kerusakan <span class="text-danger"><?= max($data)[0]['kerusakan']; ?></span> pada kasus <span class="text-danger"><?= max($data)[0]['kode_kasus']; ?></span> dengan nilai persentase kemiripan <span class="text-danger"><?= round(max($data)[0]['nilai'] * 100, 2), '%' ; ?></span></h5>
+                        <h5 class="font-weight-bold text-center text-dark mt-4">  Solusi : </h5>
+                        <h5 ><?= max($data)[0]['id_kerusakan']; ?></h5>
                     <?php else: ?>
                         <h6 class="font-weight-bold text-center text-danger">Hasil Diagnosis Tidak Di Temukan Kemiripan</h6>
                     <?php endif; ?>
