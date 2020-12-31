@@ -37,6 +37,7 @@ $routes->get('/admin/solusi', 'Admin\Solusi::index');
 $routes->get('/admin/kerusakan', 'Admin\Kerusakan::index');
 $routes->get('/admin/basiskasus', 'Admin\BasisKasus::index');
 $routes->get('/admin/diagnosis', 'Admin\Diagnosis::index');
+$routes->get('/admin/kasusbaru', 'Admin\KasusBaru::index');
 
 /**
  * --------------------------------------------------------------------
