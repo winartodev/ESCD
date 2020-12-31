@@ -24,14 +24,11 @@
 <div class="row">
     <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-info">
+        <div class="small-box bg-info text-center">
             <div class="inner">
                 <h3><?= $jumlahGejala; ?></h3>
 
                 <p>Gejala</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-bag"></i>
             </div>
             <a href="<?= base_url(); ?>/admin/gejala" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
@@ -39,29 +36,23 @@
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-success">
+        <div class="small-box bg-success text-center">
             <div class="inner">
                 <h3><?= $jumlahKerusakan; ?></h3>
 
                 <p>Kerusakan</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-stats-bars"></i>
-            </div>
+            </div> 
             <a href="<?= base_url(); ?>/admin/kerusakan" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
     </div>
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-warning">
+        <div class="small-box bg-warning text-center">
             <div class="inner">
                 <h3><?= $jumlahSolusi; ?></h3>
 
                 <p>Solusi</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-person-add"></i>
             </div>
             <a href="<?= base_url(); ?>/admin/solusi" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
@@ -69,14 +60,11 @@
     <!-- ./col -->
     <div class="col-lg-3 col-6">
         <!-- small box -->
-        <div class="small-box bg-danger">
+        <div class="small-box bg-danger text-center">
             <div class="inner">
                 <h3><?= $jumlahKasusBaru; ?></h3>
 
                 <p>KasusBaru</p>
-            </div>
-            <div class="icon">
-                <i class="ion ion-pie-graph"></i>
             </div>
             <a href="<?= base_url(); ?>/admin/KasusBaru" class="small-box-footer">More info <i class="fas fa-arrow-circle-right"></i></a>
         </div>
