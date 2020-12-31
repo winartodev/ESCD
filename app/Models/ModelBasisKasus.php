@@ -14,10 +14,12 @@ class ModelBasisKasus extends Model
     {
         if ($id == false) 
         {
-            return $this->table('tbl_basiskasus')->join('tbl_kerusakan', 'tbl_kerusakan.id_kerusakan = tbl_basiskasus.id_kerusakan')->groupBy('kode_kasus')->get()->getResultArray();
+            return $this->table('tbl_basiskasus')->join('tbl_kerusakan', 'tbl_kerusakan.id_kerusakan = tbl_basiskasus.id_kerusakan')
+                                                ->join('tbl_solusi', 'tbl_solusi.id_solusi = tbl_kerusakan.id_solusi')->groupBy('kode_kasus')->get()->getResultArray();
         }
 
-        return $this->table('tbl_basiskasus')->join('tbl_kerusakan', 'tbl_kerusakan.id_kerusakan = tbl_basiskasus.id_kerusakan')->where(['id_basis_kasus' => $id])->first();
+        return $this->table('tbl_basiskasus')->join('tbl_kerusakan', 'tbl_kerusakan.id_kerusakan = tbl_basiskasus.id_kerusakan')
+                                            ->join('tbl_solusi', 'tbl_solusi.id_solusi = tbl_kerusakan.id_solusi')->where(['id_basis_kasus' => $id])->first();
     }
 
     public function createRowSpan($kode_kasus) 
