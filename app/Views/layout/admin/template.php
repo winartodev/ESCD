@@ -241,6 +241,25 @@
       $('.id_kerusakan').val(id_kerusakan);
     });
 
+    $('.btn-edit-gejala-kasusbaru').on('click', function () {
+      var id_kasus_baru = $(this).data('id_kasus_baru');
+      var kode_kasus = $(this).data('kode_kasus');
+      var gejala = $(this).data('gejala');
+      var id_gejala = $(this).data('id_gejala');
+      var bobot = $(this).data('bobot');
+      $('.id_kasus_baru').val(id_kasus_baru);
+      $('.kode_kasus').val(kode_kasus);
+      $('.gejala').val(gejala);
+      $('.id_gejala').val(id_gejala);
+      $('.bobot').val(bobot);
+    });
+
+    $('.btn-delete-kasusbaru').on('click', function () {
+      var kode_kasus = $(this).data('kode_kasus');
+      $('.kasus_baru').text(kode_kasus);
+      $('.kode_kasus').val(kode_kasus);
+    });
+
     //Initialize Select2 Elements
     $('.option_gejala').select2( {
         theme: 'bootstrap4'
