@@ -37,6 +37,12 @@ class ModelGejala extends Model
         return $query;
     } 
 
+    public function countGejala() 
+    {
+        $query = $this->countAllResults();
+        return $query;
+    }
+
     public function autoNumber() 
     {
         $row_number = $this->countAllResults();

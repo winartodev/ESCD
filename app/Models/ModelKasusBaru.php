@@ -37,6 +37,12 @@ class ModelKasusBaru extends Model
         return $query;
     }
 
+    public function countKasusBaru() 
+    {
+        $query = $this->groupBy('kode_kasus')->countAllResults();
+        return $query;
+    }
+
     public function deleteKodeKasus($id)
     {
         $query = $this->db->table('tbl_kasusbaru')->delete(array('kode_kasus' => $id));

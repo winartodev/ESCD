@@ -49,6 +49,12 @@ class ModelSolusi extends Model
         return $new_number;
     }
 
+    public function countSolusi() 
+    {
+        $query = $this->countAllResults();
+        return $query;
+    }
+
     public function deleteSolusi($id)
     {
         $query = $this->db->table('tbl_solusi')->delete(array('id_solusi' => $id));

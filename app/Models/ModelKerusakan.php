@@ -42,6 +42,11 @@ class ModelKerusakan extends Model
         return $query;
     } 
 
+    public function countKerusakan() 
+    {
+        $query = $this->countAllResults();
+        return $query;
+    }
 
     public function autoNumber() 
     {
